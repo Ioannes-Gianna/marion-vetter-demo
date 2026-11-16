@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marion Vetter – Praxis für Musiktherapie in Dortmund</title>
+<meta name="description" content="Praxis für Musiktherapie in Dortmund-Mitte. Diplom-Musiktherapeutin und Heilpraktikerin (Psychotherapie). Einzel-, Familien- und Gruppentherapie – ohne musikalische Vorkenntnisse.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23a4532f'/%3E%3Cpath d='M5 18c3-8 6-8 9 0s6 8 9 0 4-6 4-6' stroke='%23fbf7f1' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#fbf7f1;
+    --bg-alt:#f2ebe0;
+    --ink:#2a2530;
+    --ink-soft:#5d5662;
+    --accent:#a4532f;
+    --accent-dark:#7f3c1f;
+    --sage:#6f8571;
+    --plum:#5a3d5c;
+    --line:#e3d9ca;
+    --card:#ffffff;
+    --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style",Georgia,serif;
+    --sans:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    --radius:18px;
+    --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  img,svg{max-width:100%;display:block}
+  a{color:var(--accent-dark)}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0 0 .5em;color:var(--ink)}
+  h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.01em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+  h3{font-size:1.3rem}
+  p{margin:0 0 1em}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.8em;display:block}
+  section{padding:96px 0}
+  .alt{background:var(--bg-alt)}
+
+  /* Demo-Hinweis */
+  .demo-bar{background:var(--ink);color:#f3ece2;font-size:.82rem;text-align:center;padding:7px 16px}
+  .demo-bar strong{color:#f0b58f}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(251,247,241,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .brand-mark{width:38px;height:38px;border-radius:11px;background:var(--accent);display:grid;place-items:center;flex:none}
+  .brand-name{font-family:var(--serif);font-size:1.2rem;font-weight:600;line-height:1.1}
+  .brand-sub{font-size:.75rem;color:var(--ink-soft);letter-spacing:.04em}
+  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+  nav a{text-decoration:none;color:var(--ink);font-size:.95rem}
+  nav a:hover{color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.98rem;transition:background .2s,transform .2s;border:0}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .nav .btn{padding:10px 20px;font-size:.9rem}
+  .menu-toggle{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+  /* Hero */
+  .hero{padding:80px 0 96px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .hero p.lead{font-size:1.2rem;color:var(--ink-soft);max-width:34em}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 34px}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:.92rem;color:var(--ink-soft);padding:0;margin:0;list-style:none}
+  .facts li{display:flex;align-items:center;gap:8px}
+  .facts li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sage)}
+  .hero-art{position:relative;aspect-ratio:1/1;border-radius:50% 50% 46% 54% / 55% 48% 52% 45%;background:linear-gradient(160deg,#e9d6c3,#d9b79c 55%,#b9876a);overflow:hidden;box-shadow:0 30px 60px -30px rgba(90,61,92,.45)}
+  .hero-art svg{position:absolute;inset:0;width:100%;height:100%}
+  .photo-hint{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);background:rgba(255,255,255,.82);color:var(--ink-soft);font-size:.78rem;padding:6px 14px;border-radius:999px;white-space:nowrap}
+
+  /* Intro / Was ist */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .quote{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.35;color:var(--plum);border-left:3px solid var(--accent);padding-left:24px;margin:0}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .pill{background:var(--card);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.9rem}
+
+  .ways{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .way{background:var(--card);border-radius:var(--radius);padding:30px;border:1px solid var(--line)}
+  .way .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:18px}
+  .way p{color:var(--ink-soft);margin:0;font-size:.97rem}
+
+  /* Angebot */
+  .head{max-width:640px;margin-bottom:48px}
+  .head p{color:var(--ink-soft)}
+  .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .offer{background:var(--card);border-radius:var(--radius);padding:30px;border:1px solid var(--line);position:relative;transition:transform .25s,box-shadow .25s}
+  .offer:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(42,37,48,.35)}
+  .offer .num{font-family:var(--serif);color:var(--accent);font-size:.95rem;margin-bottom:10px;display:block}
+  .offer p{color:var(--ink-soft);font-size:.97rem;margin:0}
+
+  /* Themen */
+  .topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:8px}
+  .topic{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:500}
+  .topic span{width:10px;height:10px;border-radius:50%;flex:none}
+  .note{font-size:.88rem;color:var(--ink-soft);margin-top:22px}
+
+  /* Ablauf */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:step;position:relative}
+  .step{padding:0 28px 0 0;position:relative}
+  .step::before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--plum);color:#fff;font-family:var(--serif);font-size:1.3rem;margin-bottom:22px;position:relative;z-index:1}
+  .step::after{content:"";position:absolute;top:26px;left:52px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+  .step:last-child::after{display:none}
+  .step p{color:var(--ink-soft);font-size:.97rem}
+
+  /* Über mich */
+  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(170deg,#d7c6b6,#b9a08c);position:relative;overflow:hidden;display:grid;place-items:center;color:rgba(255,255,255,.9);font-size:.9rem;text-align:center}
+  .portrait svg{width:46%;opacity:.55}
+  .portrait .photo-hint{bottom:6%}
+  .creds{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+  .creds li{display:flex;gap:14px;align-items:flex-start}
+  .creds li svg{flex:none;margin-top:4px}
+  .exp{margin-top:26px;padding:22px 24px;background:var(--bg-alt);border-radius:14px;font-size:.95rem;color:var(--ink-soft)}
+
+  /* Kosten */
+  .cost-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .cost{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .cost ul{margin:0;padding-left:1.1em;color:var(--ink-soft)}
+  .cost li{margin-bottom:.45em}
+
+  /* Kontakt */
+  .contact{background:var(--plum);color:#f5eef4}
+  .contact h2,.contact h3{color:#fff}
+  .contact .eyebrow{color:#f0b58f}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+  .contact p{color:#e6d9e5}
+  .c-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:30px}
+  .c-row{display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .c-row:last-child{border-bottom:0}
+  .c-row svg{flex:none;margin-top:3px}
+  .c-row a{color:#fff}
+  .c-row small{display:block;color:#cdbacb;font-size:.85rem}
+  .contact .btn{background:#f0b58f;color:var(--ink)}
+  .contact .btn:hover{background:#fff}
+  .contact .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+  .contact .btn-ghost:hover{background:#fff;color:var(--ink)}
+
+  /* Terminbuchung (Platzhalter) */
+  .booking{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+  .bk{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -36px rgba(42,37,48,.4);overflow:hidden}
+  .bk-top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);gap:12px;flex-wrap:wrap}
+  .bk-badge{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;background:#f6e3d8;color:var(--accent-dark);padding:5px 10px;border-radius:999px;font-weight:700}
+  .bk-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .bk-col{padding:22px 24px}
+  .bk-col+.bk-col{border-left:1px solid var(--line)}
+  .bk-label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 10px}
+  .types{display:grid;gap:8px;margin-bottom:22px}
+  .type{display:flex;justify-content:space-between;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer;font-size:.93rem;background:#fff;text-align:left;font-family:inherit;color:var(--ink)}
+  .type small{color:var(--ink-soft)}
+  .type.on{border-color:var(--accent);background:#fdf3ed}
+  .cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:600}
+  .cal-head button{background:none;border:1px solid var(--line);border-radius:8px;width:30px;height:30px;cursor:pointer;color:var(--ink)}
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:.85rem}
+  .cal .dow{color:var(--ink-soft);font-size:.72rem;padding:4px 0}
+  .cal button{aspect-ratio:1/1;border:0;border-radius:50%;background:none;font-family:inherit;font-size:.86rem;color:#bbb2a6;cursor:default}
+  .cal button.free{color:var(--ink);background:#f2ebe0;cursor:pointer;font-weight:600}
+  .cal button.free:hover{background:#ead9c8}
+  .cal button.sel{background:var(--accent);color:#fff}
+  .slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .slot{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:9px 0;cursor:pointer;font-family:inherit;font-size:.9rem;color:var(--ink)}
+  .slot:hover{border-color:var(--accent)}
+  .slot.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .bk-empty{color:var(--ink-soft);font-size:.9rem;padding:18px 0}
+  .bk-foot{border-top:1px solid var(--line);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:#fdfaf6}
+  .bk-sum{font-size:.9rem;color:var(--ink-soft)}
+  .bk-sum strong{color:var(--ink)}
+  .btn[disabled]{opacity:.45;pointer-events:none}
+  .bk-msg{display:none;margin:0;padding:14px 24px;background:#e5ece4;color:#33463a;font-size:.9rem}
+  .bk-msg.show{display:block}
+  .bk-points{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+  .bk-points li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-soft)}
+  .bk-points li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--sage);margin-top:9px}
+
+  @media (max-width:960px){.booking{grid-template-columns:1fr;gap:36px}}
+  @media (max-width:620px){.bk-body{grid-template-columns:1fr}.bk-col+.bk-col{border-left:0;border-top:1px solid var(--line)}.bk-col,.bk-top,.bk-foot{padding-left:16px;padding-right:16px}}
+
+  footer{background:#221d27;color:#a99fac;font-size:.88rem;padding:34px 0}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+  footer a{color:#d8cfda;text-decoration:none;margin-left:20px}
+  footer a:first-child{margin-left:0}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  @media (max-width:960px){
+    nav ul{display:none}
+    nav.open ul{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg);padding:20px 24px;gap:16px;border-bottom:1px solid var(--line)}
+    .menu-toggle{display:block}
+    .nav .btn{display:none}
+    .hero-grid,.split,.about,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .hero-art{max-width:420px;margin:0 auto;width:100%}
+    .ways,.offers{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr;gap:34px}
+    .step{padding:0 0 0 76px}
+    .step::before{position:absolute;left:0;top:0;margin:0}
+    .step::after{display:none}
+    .portrait{max-width:360px}
+  }
+  @media (max-width:620px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    section{padding:68px 0}
+    .hero{padding:48px 0 68px}
+    .ways,.offers,.cost-grid{grid-template-columns:1fr}
+    .foot{flex-direction:column}
+    footer a{margin:0 16px 0 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><strong>Entwurf</strong> · Unverbindliche Demo-Version für Marion Vetter – Inhalte basieren auf Ihrem öffentlichen Profil und werden gemeinsam finalisiert.</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Startseite">
+      <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 18c3-8 6-8 9 0s6 8 9 0 4-6 6-6" stroke="#fbf7f1" stroke-width="2.8" fill="none" stroke-linecap="round"/></svg></span>
+      <span><span class="brand-name">Marion Vetter</span><br><span class="brand-sub">Praxis für Musiktherapie · Dortmund</span></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#musiktherapie">Musiktherapie</a></li>
+        <li><a href="#angebot">Angebot</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#ueber-mich">Über mich</a></li>
+        <li><a href="#kosten">Kosten</a></li>
+        <li><a href="#termin">Termin</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a href="#termin" class="btn">Termin buchen</a>
+    <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Praxis für Musiktherapie in Dortmund-Mitte</span>
+      <h1>Wenn Worte nicht reichen, darf Musik sprechen.</h1>
+      <p class="lead">Musiktherapie macht Gefühle hörbar – und damit greifbar und veränderbar. Für Erwachsene, Kinder, Familien und Gruppen. Sie müssen dafür nicht musikalisch sein.</p>
+      <div class="hero-cta">
+        <a href="#termin" class="btn">Erstgespräch online buchen</a>
+        <a href="#musiktherapie" class="btn btn-ghost">Wie Musiktherapie wirkt</a>
+      </div>
+      <ul class="facts">
+        <li>Diplom-Musiktherapeutin</li>
+        <li>Heilpraktikerin (Psychotherapie)</li>
+        <li>Freie Termine, auch samstags</li>
+      </ul>
+    </div>
+    <div class="hero-art reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <path d="M-20 170 C 60 100, 120 240, 200 170 S 340 100, 420 170" stroke="#fbf7f1" stroke-width="3" fill="none" opacity=".9"/>
+        <path d="M-20 200 C 60 140, 130 270, 205 200 S 345 130, 420 200" stroke="#5a3d5c" stroke-width="2.4" fill="none" opacity=".55"/>
+        <path d="M-20 232 C 70 170, 120 300, 210 232 S 350 165, 420 232" stroke="#fbf7f1" stroke-width="1.6" fill="none" opacity=".7"/>
+        <path d="M-20 262 C 80 210, 140 320, 215 262 S 355 200, 420 262" stroke="#6f8571" stroke-width="2" fill="none" opacity=".6"/>
+        <circle cx="290" cy="110" r="38" fill="#fbf7f1" opacity=".22"/>
+        <circle cx="110" cy="300" r="22" fill="#5a3d5c" opacity=".18"/>
+      </svg>
+      <span class="photo-hint">Platz für Ihr Praxisfoto</span>
+    </div>
+  </div>
+</section>
+
+<!-- WAS IST MUSIKTHERAPIE -->
+<section class="alt" id="musiktherapie">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Was ist Musiktherapie?</span>
+        <h2>Gemeinsam spielen, hören, verstehen.</h2>
+        <p>Im Mittelpunkt meiner Arbeit steht die <strong>aktive Musiktherapie</strong>: freies Spiel und Improvisation mit einfachen, leicht spielbaren Instrumenten. Ohne Noten, ohne richtig oder falsch. So werden Gefühle, Themen und Beziehungen hörbar – oft dort, wo Worte (noch) fehlen.</p>
+        <p>Ergänzend arbeite ich <strong>rezeptiv</strong>: Sie hören, entspannen, lassen innere Bilder entstehen – zum Beispiel auf der Klangwiege. Und natürlich ist auch das Gespräch Teil jeder Stunde.</p>
+        <div class="pill-row">
+          <span class="pill">Keine Vorkenntnisse nötig</span>
+          <span class="pill">Auf Deutsch &amp; Englisch</span>
+          <span class="pill">Auch mobil möglich</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="quote">„Sie müssen nicht musikalisch sein. Die Musik richtet sich nach Ihnen – nach Ihrem Tempo, Ihren Bedürfnissen, Ihrem Thema."</p>
+      </div>
+    </div>
+
+    <div class="ways">
+      <div class="way reveal">
+        <div class="ico" style="background:#f6e3d8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a4532f" stroke-width="2" stroke-linecap="round"><path d="M4 14v-4M8 18V6M12 15V9M16 20V4M20 14v-4"/></svg></div>
+        <h3>Aktiv</h3>
+        <p>Improvisation und gestalterisches Spiel auf Trommeln, Klangstäben, Leier und mehr – nonverbal ausdrücken, was gerade da ist.</p>
+      </div>
+      <div class="way reveal">
+        <div class="ico" style="background:#e5ece4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6f8571" stroke-width="2" stroke-linecap="round"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M3 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity=".5"/></svg></div>
+        <h3>Rezeptiv</h3>
+        <p>Hören und Spüren: Klangreisen, begleitete Imaginationen und die Klangwiege für tiefe Entspannung.</p>
+      </div>
+      <div class="way reveal">
+        <div class="ico" style="background:#ece3ec"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5a3d5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
+        <h3>Im Gespräch</h3>
+        <p>Was beim Spielen hörbar wurde, bekommt im Gespräch Raum – respektvoll, achtsam und in Ihrem Tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANGEBOT -->
+<section id="angebot">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Angebot</span>
+      <h2>Für wen ist Musiktherapie?</h2>
+      <p>Vorgehen, Intensität und Musik passe ich an die Person oder Gruppe an – vom Säugling bis ins hohe Alter.</p>
+    </div>
+    <div class="offers">
+      <div class="offer reveal"><span class="num">01</span><h3>Erwachsene</h3><p>Einzeltherapie bei seelischer Belastung, Stress, Lebenskrisen oder zur Begleitung bei körperlichen Erkrankungen.</p></div>
+      <div class="offer reveal"><span class="num">02</span><h3>Kinder &amp; Jugendliche</h3><p>Spielerischer Zugang zu Gefühlen – auch lerntherapeutisch bei Konzentrations- und Lernschwierigkeiten.</p></div>
+      <div class="offer reveal"><span class="num">03</span><h3>Eltern mit Säuglingen</h3><p>Musik als Brücke in der frühen Bindung zwischen Mutter oder Vater und Kind.</p></div>
+      <div class="offer reveal"><span class="num">04</span><h3>Familien</h3><p>Beziehungen hörbar machen: Wer spielt laut, wer leise, wer hört wem zu? Neue Muster gemeinsam ausprobieren.</p></div>
+      <div class="offer reveal"><span class="num">05</span><h3>Gruppen</h3><p>Gemeinsames Musizieren stärkt Kontakt, Ausdruck und Gemeinschaft.</p></div>
+      <div class="offer reveal"><span class="num">06</span><h3>Mobil vor Ort</h3><p>Auf Wunsch komme ich zu Ihnen – etwa in Wohngruppen, Einrichtungen oder ins Hospiz.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THEMEN -->
+<section class="alt" id="themen">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Schwerpunkte</span>
+      <h2>Wobei ich begleite</h2>
+    </div>
+    <div class="topics reveal">
+      <div class="topic"><span style="background:#a4532f"></span>Stress, Burnout &amp; Mobbing</div>
+      <div class="topic"><span style="background:#6f8571"></span>Ängste &amp; Phobien</div>
+      <div class="topic"><span style="background:#5a3d5c"></span>Depression</div>
+      <div class="topic"><span style="background:#a4532f"></span>Trauer &amp; Verlust</div>
+      <div class="topic"><span style="background:#6f8571"></span>Psychosomatik &amp; Schmerzen</div>
+      <div class="topic"><span style="background:#5a3d5c"></span>Psychoonkologie</div>
+      <div class="topic"><span style="background:#a4532f"></span>Neurologische Erkrankungen</div>
+      <div class="topic"><span style="background:#6f8571"></span>Trauma (Musik-Traumatherapie)</div>
+      <div class="topic"><span style="background:#5a3d5c"></span>Lebensfragen &amp; Krisen</div>
+    </div>
+    <p class="note">Musiktherapie ersetzt keine ärztliche Behandlung, kann sie aber sinnvoll ergänzen. Im Erstgespräch klären wir gemeinsam, ob sie für Ihr Anliegen passt.</p>
+  </div>
+</section>
+
+<!-- ABLAUF -->
+<section id="ablauf">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Ablauf</span>
+      <h2>In drei Schritten zur Zusammenarbeit</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Erstgespräch</h3><p>Ca. 60 Minuten: Wir lernen uns kennen, sprechen über Ihr Anliegen und Ihre Ziele. Sie bekommen einen ersten Eindruck von den Instrumenten.</p></div>
+      <div class="step reveal"><h3>Kennenlernphase</h3><p>Drei Einheiten zum gegenseitigen Kennenlernen – damit Sie in Ruhe spüren können, ob die Arbeit für Sie stimmig ist.</p></div>
+      <div class="step reveal"><h3>Therapie</h3><p>Wir vereinbaren den weiteren Rahmen. Eine Einheit dauert in der Regel 45 bis 60 Minuten.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section class="alt" id="ueber-mich">
+  <div class="wrap about">
+    <div class="portrait reveal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      <span class="photo-hint">Platz für Ihr Porträt</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Über mich</span>
+      <h2>Marion Vetter</h2>
+      <p>Musik begleitet mich mein ganzes Leben. Bevor ich mich mit meiner Praxis selbstständig gemacht habe, war ich als Lehrerin mit Schwerpunkt Musik im Schuldienst tätig. Heute verstehe ich Musiktherapie als Weg, verborgene Gefühle und Beziehungen hörbar – und damit veränderbar – zu machen.</p>
+      <p>Respekt, Achtung und Empathie sind für mich die Grundlage jeder Begegnung. Und ich bleibe neugierig: Lernen hört für mich nie auf.</p>
+      <ul class="creds">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a4532f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Diplom-Musiktherapeutin</strong> – Universität Münster</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a4532f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Heilpraktikerin für Psychotherapie</strong> – Erlaubnis durch das Gesundheitsamt Dortmund</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a4532f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Zertifizierte Musik-Traumatherapeutin</strong> (FMZ)</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a4532f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Mitglied der <strong>Deutschen Musiktherapeutischen Gesellschaft</strong> (DMtG)</span></li>
+      </ul>
+      <div class="exp"><strong style="color:var(--ink)">Erfahrung aus der Praxis:</strong> psychosomatische Kliniken und Psychiatrie, Altenwohnheime, Wohngruppen, Schulprojekte sowie die Begleitung von Menschen mit Demenz, im Koma und mit neurologischen Erkrankungen.</div>
+    </div>
+  </div>
+</section>
+
+<!-- KOSTEN -->
+<section id="kosten">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Kosten &amp; Abrechnung</span>
+      <h2>Transparent von Anfang an</h2>
+      <p>Meine Praxis ist eine Privatpraxis. Eine Abrechnung über die gesetzlichen Krankenkassen ist leider nicht möglich.</p>
+    </div>
+    <div class="cost-grid">
+      <div class="cost reveal">
+        <h3>Wer kann kommen?</h3>
+        <ul>
+          <li>Privat Versicherte</li>
+          <li>Selbstzahlerinnen und Selbstzahler</li>
+          <li>Ermäßigte Preise für Studierende, Auszubildende, Kinder sowie Mütter und Väter mit Säuglingen</li>
+          <li>Rechnungen sind umsatzsteuerfrei (§ 4 Nr. 14a UStG)</li>
+        </ul>
+      </div>
+      <div class="cost reveal">
+        <h3>Gut zu wissen</h3>
+        <ul>
+          <li>Das Erstgespräch (ca. 1 Stunde) wird separat berechnet</li>
+          <li>Einheiten dauern in der Regel 45–60 Minuten</li>
+          <li>Termine nach Vereinbarung – auch früh morgens, abends oder samstags</li>
+          <li>Absagen bitte bis 2 Tage vorher, sonst fällt eine Ausfallpauschale von 50 % an</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINBUCHUNG (Platzhalter) -->
+<section class="alt" id="termin">
+  <div class="wrap booking">
+    <div class="reveal">
+      <span class="eyebrow">Online-Terminbuchung</span>
+      <h2>Ihren Termin in einer Minute anfragen</h2>
+      <p>Wählen Sie die Art des Termins, einen freien Tag und eine Uhrzeit. Sie bekommen eine Bestätigung per E-Mail und rechtzeitig eine Erinnerung.</p>
+      <ul class="bk-points">
+        <li>Rund um die Uhr buchbar, auch ohne Anruf</li>
+        <li>Automatische Erinnerung, damit kein Termin vergessen wird</li>
+        <li>Absage oder Verschiebung bequem per Link</li>
+      </ul>
+    </div>
+    <div class="bk reveal" aria-label="Terminbuchung (Demo-Platzhalter)">
+      <div class="bk-top">
+        <strong style="font-family:var(--serif);font-size:1.1rem">Termin buchen</strong>
+        <span class="bk-badge">Platzhalter · Demo</span>
+      </div>
+      <div class="bk-body">
+        <div class="bk-col">
+          <p class="bk-label">1 · Terminart</p>
+          <div class="types" id="types">
+            <button type="button" class="type on" data-t="Erstgespräch"><span>Erstgespräch</span><small>ca. 60 Min.</small></button>
+            <button type="button" class="type" data-t="Einzelsitzung"><span>Einzelsitzung</span><small>45–60 Min.</small></button>
+            <button type="button" class="type" data-t="Klangwiege / Entspannung"><span>Klangwiege / Entspannung</span><small>ca. 45 Min.</small></button>
+          </div>
+          <p class="bk-label">2 · Tag</p>
+          <div class="cal-head"><button type="button" id="prev" aria-label="Vorheriger Monat">‹</button><span id="month"></span><button type="button" id="next" aria-label="Nächster Monat">›</button></div>
+          <div class="cal" id="cal"></div>
+        </div>
+        <div class="bk-col">
+          <p class="bk-label">3 · Uhrzeit</p>
+          <div id="slots"><p class="bk-empty">Bitte wählen Sie zuerst einen Tag.</p></div>
+        </div>
+      </div>
+      <p class="bk-msg" id="bkmsg"></p>
+      <div class="bk-foot">
+        <span class="bk-sum" id="sum">Noch kein Termin gewählt</span>
+        <button type="button" class="btn" id="book" disabled>Termin anfragen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Lassen Sie uns sprechen.</h2>
+      <p>Sie möchten einen Termin vereinbaren oder haben eine Frage? Rufen Sie mich an, schreiben Sie mir eine SMS oder E-Mail. Aktuell sind freie Plätze vorhanden – in dringenden Fällen auch kurzfristig.</p>
+      <div class="hero-cta">
+        <a href="tel:+491781067501" class="btn">Jetzt anrufen</a>
+        <a href="mailto:marion.vetter@musiktherapie.de?subject=Terminanfrage%20Musiktherapie" class="btn btn-ghost">E-Mail schreiben</a>
+      </div>
+    </div>
+    <div class="c-card reveal">
+      <div class="c-row">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0b58f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><strong>Praxis für Musiktherapie</strong><br>Karl-Marx-Straße 66<br>44141 Dortmund<small>Zentral gelegen · U-Bahn ca. 2 Min. zu Fuß · gut mit Bus &amp; Auto erreichbar</small><a href="https://www.google.com/maps/search/?api=1&query=Karl-Marx-Stra%C3%9Fe+66%2C+44141+Dortmund" target="_blank" rel="noopener">Route planen →</a></div>
+      </div>
+      <div class="c-row">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0b58f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <div><a href="tel:+491781067501">0178 106 75 01</a><small>Anruf oder SMS</small></div>
+      </div>
+      <div class="c-row">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0b58f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        <div><a href="mailto:marion.vetter@musiktherapie.de">marion.vetter@musiktherapie.de</a><small>Ich melde mich zeitnah zurück</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Marion Vetter · Praxis für Musiktherapie Dortmund</span>
+    <span><a href="#top">Impressum</a><a href="#top">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+    document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});
+  })();
+
+  /* Terminbuchung – reiner Demo-Platzhalter, sendet keine Daten */
+  (function(){
+    var M=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+    var today=new Date();today.setHours(0,0,0,0);
+    var view=new Date(today.getFullYear(),today.getMonth(),1);
+    var state={type:'Erstgespräch',day:null,time:null};
+    var cal=document.getElementById('cal'),slots=document.getElementById('slots'),sum=document.getElementById('sum'),book=document.getElementById('book'),msg=document.getElementById('bkmsg');
+    function isFree(d){var w=d.getDay();if(d<=today)return false;if(w===0)return false;return (d.getDate()*7+d.getMonth())%3!==0;}
+    function timesFor(d){
+      var base=d.getDay()===6?['09:00','10:00','11:00']:['08:00','09:30','11:00','14:00','16:00','17:30','19:00'];
+      return base.filter(function(t,i){return (d.getDate()+i)%4!==0;});
+    }
+    function render(){
+      document.getElementById('month').textContent=M[view.getMonth()]+' '+view.getFullYear();
+      var h=['Mo','Di','Mi','Do','Fr','Sa','So'].map(function(x){return '<span class="dow">'+x+'</span>'}).join('');
+      var first=(view.getDay()+6)%7, days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+      for(var i=0;i<first;i++)h+='<span></span>';
+      for(var d=1;d<=days;d++){
+        var dt=new Date(view.getFullYear(),view.getMonth(),d),f=isFree(dt);
+        var sel=state.day&&dt.getTime()===state.day.getTime();
+        h+='<button type="button" data-d="'+d+'" class="'+(f?'free':'')+(sel?' sel':'')+'"'+(f?'':' disabled')+'>'+d+'</button>';
+      }
+      cal.innerHTML=h;
+      document.getElementById('prev').disabled=view<=new Date(today.getFullYear(),today.getMonth(),1);
+    }
+    function renderSlots(){
+      if(!state.day){slots.innerHTML='<p class="bk-empty">Bitte wählen Sie zuerst einen Tag.</p>';return;}
+      var t=timesFor(state.day);
+      slots.innerHTML='<p class="bk-empty" style="padding:0 0 12px">'+state.day.toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'})+'</p><div class="slots">'+t.map(function(x){return '<button type="button" class="slot'+(state.time===x?' on':'')+'">'+x+'</button>'}).join('')+'</div>';
+    }
+    function update(){
+      if(state.day&&state.time){sum.innerHTML='<strong>'+state.type+'</strong> · '+state.day.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})+', '+state.time+' Uhr';book.disabled=false;}
+      else{sum.textContent=state.day?'Bitte Uhrzeit wählen':'Noch kein Termin gewählt';book.disabled=true;}
+    }
+    document.getElementById('types').addEventListener('click',function(e){var b=e.target.closest('.type');if(!b)return;document.querySelectorAll('.type').forEach(function(x){x.classList.remove('on')});b.classList.add('on');state.type=b.dataset.t;update();});
+    cal.addEventListener('click',function(e){var b=e.target.closest('button.free');if(!b)return;state.day=new Date(view.getFullYear(),view.getMonth(),+b.dataset.d);state.time=null;msg.classList.remove('show');render();renderSlots();update();});
+    slots.addEventListener('click',function(e){var b=e.target.closest('.slot');if(!b)return;state.time=b.textContent;renderSlots();update();});
+    document.getElementById('prev').onclick=function(){view.setMonth(view.getMonth()-1);render();};
+    document.getElementById('next').onclick=function(){view.setMonth(view.getMonth()+1);render();};
+    book.onclick=function(){msg.innerHTML='<strong>Demo:</strong> An dieser Stelle wird Ihr Online-Kalender (TidyCal) eingebunden: Termine landen direkt in Ihrem Kalender, Patientinnen und Patienten erhalten automatisch Bestätigung und Erinnerung. Es wurden keine Daten gesendet.';msg.classList.add('show');};
+    render();update();
+  })();
+</script>
+</body>
+</html>
